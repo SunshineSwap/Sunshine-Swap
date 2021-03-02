@@ -1,7 +1,6 @@
 import React from 'react'
 import web3Obj from './helper'
 import "./App.less";
-import GitHubButton from "react-github-btn";
 import { Routes } from "./routes";
 
 const tokenAbi = require('human-standard-token-abi')

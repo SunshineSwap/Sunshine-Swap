@@ -10,11 +10,7 @@ const web3Obj = {
   },
   initialize: async function (buildEnv) {
     const torus = new Torus()
-    await torus.init({   network: {
-      host: "https://ethboston1.skalenodes.com:10062", // mandatory
-      chainId: 1, // optional
-      networkName: "Skale Network" // optional
-    }|| 'production', network: { host: 'rinkeby' } })
+    await torus.init({ buildEnv: buildEnv || 'production', network: { host: 'rinkeby' } })
     await torus.login()
     web3Obj.setweb3(torus.provider)
     web3Obj.torus = torus
